@@ -24,7 +24,7 @@ describe('Navigate to More in Single Music', () => {
     cy.get('@popup').should('be.calledWith', 'https://open.spotify.com/track/57f2cCxf67aA6BtD6Y8wbR');
 
     // Repeat the previous test but for Apple Music
-    cy.visit('https://testdummy.komi.io/'); 
+    cy.visit('https://testdummy.komi.io/');
     cy.xpath('/html/body/div/div/section/section/div/div/div[1]/div[5]/div[1]/div[2]/div/div/div/div/div[2]/div[5]/button')
       .contains(buttonText3).click();
     cy.window().then((win) => {
