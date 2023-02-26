@@ -3,7 +3,7 @@ describe('Images', () => {
     cy.visit('https://testdummy.komi.io/');
 
     // Check that all thumbnails are loaded
-    cy.get('.image-skeleton__image.thumb.isLoaded').each((image) => {
+    cy.get('.image-skeleton__image.thumb').each((image) => {
       cy.wrap(image)
         .should('be.visible')
         .and(($img) => {
